@@ -1,0 +1,6 @@
+/* view/booklists/index.wxss */
+.lists {
+  height: 240rpx;
+  padding: 0 20rpx;
+  margin: 0 0 30rpx;
+}

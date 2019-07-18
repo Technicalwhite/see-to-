@@ -1,0 +1,22 @@
+<!--view/classification/index.wxml-->
+<view class='title'>男生</view>
+<view class='lists'>
+    <view class='box' wx:for="{{book.male}}" wx:key="{{index}}" data-leng='{{index}}' data-name='{{item.name}}' data-x='male' bindtap='gotobooklists'>
+      <view data-name='{{item.name}}'>{{item.name}}</view>
+      <view class='ren'>{{item.bookCount}}</view>
+    </view>
+</view>
+<view class='title'>女生</view>
+<view class='lists'>
+    <view class='box' wx:for="{{book.female}}" wx:key="{{index}}" data-leng='{{index}}'  data-name='{{item.name}}' data-x='female' bindtap='gotobooklists'>
+      <view>{{item.name}}</view>
+      <view class='ren'>{{item.bookCount}}</view>
+    </view>
+</view>
+<view class='title'>出版作品</view>
+<view class='lists'>
+    <view class='box' wx:for="{{book.press}}" wx:key="{{index}}" data-leng='{{index}}' data-name='{{item.name}}' data-x='press' bindtap='gotobooklists'>
+      <view data-name='{{item.name}}'>{{item.name}}</view>
+      <text class='ren'>{{item.bookCount}}</text>
+    </view>
+</view>

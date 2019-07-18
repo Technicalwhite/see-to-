@@ -1,0 +1,6 @@
+<!--pages/bookMulu/index.wxml-->
+<view class='bookName'>{{bookName}}</view>
+<view class='list'>
+ <view class='p li' wx:for="{{mululist}}" wx:key="index" data-book='{{item.order-1}}' 
+ data-link='{{item.link}}' bindtap='gotoreading'>{{item.title}}</view>
+</view>

@@ -1,0 +1,141 @@
+<!--index.wxml-->
+
+<!-- 内容区 -->
+<view class='content'>
+  <swiper class='tab-box' current="{{current}}" bindchange="eventchange">
+    <swiper-item>
+      <scroll-view scroll-y="true" style="height: 100%">
+        <!-- 首页导航 -->
+        <view>
+          <view class='header'>
+            <view class='header-log'>书海</view>
+            <view>
+              <swiper circular="true" autoplay="true" class='header-lunbotu'>
+                <swiper-item>
+                  <image class='auto-img' src='../../images/73a8b8e12e676b4917737b34cdaeec29.jpg'></image>
+                </swiper-item>
+                <swiper-item>
+                  <image class='auto-img' src='../../images/7e2ffec11bd6b7862279af75c3a26806.jpg'></image>
+                </swiper-item>
+                <swiper-item>
+                  <image class='auto-img' src='../../images/98002b8060b7ec160e344bcfc2295096.jpg'></image>
+                </swiper-item>
+                <swiper-item>
+                  <image class='auto-img' src='../../images/a048742b9b1b8520d481439af542f383.jpg'></image>
+                </swiper-item>
+              </swiper>
+            </view>
+          </view>
+          <view class='tab-nav'>
+            <view class='innav'>
+              <view class='{{current==0?"on":""}} nav iconfont' data-current="0" bindtap='tab'>首页
+              </view>
+              <view class='{{current==1?"on":""}} nav' data-current="1" bindtap='tab'>分类
+              </view>
+              <view class='{{current==2?"on":""}} nav' data-current="2" bindtap='tab'>推荐
+              </view>
+              <view class='{{current==3?"on":""}} nav' data-current="3" bindtap='tab'>书单
+              </view>
+            </view>
+
+          </view>
+        </view>
+        <!-- 首页导航end -->
+        <Shouye></Shouye>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" style="height: 100%">
+        <!-- 分类导航 -->
+        <view>
+          <view class='tab-nav'>
+            <view class='innav'>
+              <view class='{{current==0?"on":""}} nav' data-current="0" bindtap='tab'>首页
+              </view>
+              <view class='{{current==1?"on":""}} nav' data-current="1" bindtap='tab'>分类
+              </view>
+              <view class='{{current==2?"on":""}} nav' data-current="2" bindtap='tab'>推荐
+              </view>
+              <view class='{{current==3?"on":""}} nav' data-current="3" bindtap='tab'>书单
+              </view>
+            </view>
+
+          </view>
+        </view>
+        <!-- 分类导航end -->
+        <Classification></Classification>
+
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" style="height: 100%">
+        <!-- 推荐导航 -->
+        <view>
+          <view class='tab-nav'>
+            <view class='innav'>
+              <view class='{{current==0?"on":""}} nav' data-current="0" bindtap='tab'>推荐
+              </view>
+              <view class='{{current==1?"on":""}} nav' data-current="1" bindtap='tab'>分类
+              </view>
+              <view class='{{current==2?"on":""}} nav' data-current="2" bindtap='tab'>推荐
+              </view>
+              <view class='{{current==3?"on":""}} nav' data-current="3" bindtap='tab'>书单
+              </view>
+            </view>
+
+          </view>
+        </view>
+        <!-- 推荐导航end -->
+        <Recommend></Recommend>
+
+      </scroll-view>
+    </swiper-item>
+    <swiper-item class='box'>
+      <scroll-view scroll-y="true" style="height: 100%">
+        <!-- 书单页导航 -->
+        <view>
+          <view class='tab-nav'>
+            <view class='innav'>
+              <view class='{{current==0?"on":""}} nav' data-current="0" bindtap='tab'>首页
+              </view>
+              <view class='{{current==1?"on":""}} nav' data-current="1" bindtap='tab'>分类
+              </view>
+              <view class='{{current==2?"on":""}} nav' data-current="2" bindtap='tab'>推荐
+              </view>
+              <view class='{{current==3?"on":""}} nav' data-current="3" bindtap='tab'>书单
+              </view>
+            </view>
+
+          </view>
+        </view>
+        <!-- 书单页导航end -->
+        <view class='list-title'>今日书单</view>
+        <Booklists></Booklists>
+      </scroll-view>
+
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 内容区end -->
+
+
+
+
+
+
+
+
+
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->

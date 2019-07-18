@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "Shouye": "../../view/shouye/index",
+    "Booklists": "../../view/booklists/index",
+    "Recommend": "../../view/recommend/index",
+    "Classification": "../../view/classification/index"
+  }
+}

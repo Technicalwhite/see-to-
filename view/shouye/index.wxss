@@ -1,0 +1,10 @@
+/* view/shouye/index.wxss */
+.title{
+  line-height: 88rpx;
+  font-weight: 900;
+}
+.lists {
+  height: 240rpx;
+  padding: 0 20rpx;
+  margin: 0 0 30rpx;
+}

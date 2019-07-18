@@ -1,0 +1,25 @@
+<!--pages/books/index.wxml-->
+<view class='nav'>
+  <view class='mins-nav'>
+    <view class='ul'>
+      <view class='li {{largeIndex==index?"active":""}}' wx:if="{{largeTypes!==''}}" wx:for="{{largeTypes}}" wx:key="{{index}}" data-name="{{item.type}}" data-largeIndex='{{index}}' bindtap='largeType'>
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{litter.length!==0}}" class='mins-nav'>
+    <view class='ul'>
+      <view class='li {{minorIndex==index?"active":""}}' wx:for="{{litter}}" wx:key="{{index}}" data-name="{{item}}" data-smallindex='{{index}}' bindtap='gotobooklists'>
+        {{item}}
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bookbox'>
+    <scroll-view class='booklist' style="height: 100%;" scroll-y='true' bindscrolltolower='jiazai'>
+      <view class='lists' wx:if="{{books!=false}}" wx:for='{{books}}' wx:key="{{index}}" bindtap='clickId'  data-bookId='{{item._id}}'>
+        <Booklist book="{{item}}"></Booklist>
+      </view>
+      <view wx:if="{{books==false}}">暂时没有相关的书籍o(*////▽////*)q</view>
+    </scroll-view>
+  </view>

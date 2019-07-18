@@ -1,0 +1,35 @@
+/* pages/books/index.wxss */
+.mins-nav{
+  height: 75rpx;
+  /* background: #e49; */
+  overflow-x: auto;
+}
+.mins-nav .ul{
+  width: auto;
+  height: 100%;
+  display: flex;
+}
+.mins-nav .ul .li{
+  margin: 0 10rpx;
+  text-align: center;
+  line-height: 75rpx;
+}
+.bookbox{
+  height: calc(100% - 75rpx * 2);
+}
+.booklist{
+
+}
+.lists {
+  height: 240rpx;
+  padding: 0 20rpx;
+  margin: 0 0 30rpx;
+}
+.active{
+  color: #a04cf7;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

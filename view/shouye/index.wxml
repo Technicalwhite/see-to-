@@ -1,0 +1,7 @@
+<!--view/shouye/index.wxml-->
+<view>
+  <view class='title'>大家都在看</view>
+  <view class='lists' wx:for="{{indexhot}}" wx:key="{{index}}" data-bookid='{{item._id}}' bindtap='tobook'>
+  <Booklist book="{{item}}"></Booklist>
+  </view>
+</view>

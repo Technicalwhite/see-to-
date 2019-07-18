@@ -1,0 +1,8 @@
+<!--view/recommend/index.wxml-->
+<view class='book'>
+
+<view class='lists' wx:for="{{books}}" wx:key="{{index}}" data-bookid='{{item._id}}' bindtap='tobook'>
+<Booklist book="{{item}}"></Booklist>
+</view>
+
+</view> 

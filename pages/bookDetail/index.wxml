@@ -1,0 +1,63 @@
+<!--pages/bookDetail/index.wxml-->
+<view class='book-box'>
+  <view class='book'>
+    <view class='bookcover'>
+      <image class='auto-img' src='{{imgSrc}}'></image>
+    </view>
+    <view class='detail'>
+      <view class="book-name p">{{book.title}}</view>
+      <view class="book-popularity p">
+        <text>{{book.author}}</text>
+        <text class="fen">|</text>
+        <text>{{book.cat}}</text>
+      </view>
+      <view class='p update'>{{book.isSerial? time
+        <23? time+ "小时前更新": "跟新日期"+olddate: "完了"}}</view>
+          <view class='p text'>{{textnum}}字数</view>
+      </view>
+    </view>
+    <view class='see'>
+      <view class='book-looked'>
+        <view>追人气</view>
+        <view>{{zhuishu}}</view>
+      </view>
+      <view class='book-looked'>
+        <view>读者存留率</view>
+        <view>{{book.retentionRatio}}%</view>
+      </view>
+      <view class='book-looked'>
+        <view class="">日更字数/天</view>
+        <view>{{book.serializeWordCount}}</view>
+      </view>
+    </view>
+    <view class='tags'>
+      <view class='tags-btn' wx:for="{{book.tags}}" wx:key="{{index}}">
+        {{item}}
+      </view>
+    </view>
+    <!-- 简介 -->
+    <view class='j-box' style="{{show==true?'height:none;':'height:180rpx;'}}">
+      <view class='jianjie' wx:for="{{jianjie}}" wx:key="index">{{item}}</view>
+      <view class='zhezhao' bindtap='kai'>
+        <text class='weizhi iconfont icon-jiantou_xia'></text>
+      </view>
+    </view>
+    <!-- 简介end -->
+    <!-- 目录 -->
+    <view class='mulu'>
+      <view>目录</view>
+      <view class='mulu-txt' bindtap='gotomulu'>
+        <view>[{{book.isSerial? time
+          < 23? time+ "小时前更新": "跟新日期"+olddate: "完了"}}]</view>
+            <view class='p'>{{book.lastChapter}}</view>
+            <view class='mulu-txt iconfont icon-jiantou'></view>
+        </view>
+      </view>
+      <view class='muli-box'>
+        <view class='newzhang'>最新章节</view>
+        <view class='p li' wx:for="{{mululist}}" wx:key="{{index}}" bindtap='gotomulu'>{{item.title}}</view>
+      </view>
+      <view class='wanzhengmulu' bindtap='gotomulu'>完整目录</view>
+      <!-- 目录end -->
+      <view class='run'>开始阅读</view>
+</view>

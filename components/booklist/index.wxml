@@ -1,0 +1,20 @@
+<!--Components/booklist/booklist.wxml -->
+<view class='booklist'>
+  <view class='bookimg'>
+    <image class='auto-img' src='{{booklogo + book.cover}}'></image>
+  </view>
+  <view class="list-right">
+    <view class="book-name">{{book.title}}</view>
+    <view class="book-popularity p">
+      <text>{{book.author}}</text>
+      <text class="fen">|</text>
+      <text>{{book.majorCate}}</text>
+    </view>
+    <view class="book-brief p">{{book.shortIntro}}</view>
+    <view class="book-di p">
+      <text class="txt">{{book.latelyFollower}}万人气</text>
+      <text class="fen">|</text>
+      <text class="txt">{{book.retentionRatio}}%读者存留</text>
+    </view>
+  </view>
+</view>

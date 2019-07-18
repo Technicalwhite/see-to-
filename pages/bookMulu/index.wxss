@@ -1,0 +1,29 @@
+/* pages/bookMulu/index.wxss */
+.bookName{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #fff;
+}
+.list{
+  padding: 100rpx 30rpx;
+}
+.list .li{
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ebebeb;
+}
+.p {
+  overflow: hidden;
+  /* line-height: 1.5rem; */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}

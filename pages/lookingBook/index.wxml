@@ -1,0 +1,18 @@
+<!--pages/lookingBook/index.wxml-->
+<scroll-view scroll-y="true" scroll-top="{{scrollTop}}" id='looking' style="height:100vh;">
+  <view class='booktitle'>
+    {{bookName}}
+  </view>
+  <view class='bookChapter'>
+    <view class='chapterName'>{{chapterName}}</view>
+    <view wx:for="{{bookChapter}}" wx:key="{{index}}">
+      {{item}}
+    </view>
+  </view>
+  <view class='book-btn'>
+    <view bindtap='shang'>上一章</view>
+    <view bindtap='tomulu'>目录 </view>
+    <view bindtap='xia'>下一章</view>
+  </view>
+  <view wx:if="{{isONE}}" class='looding'>已经是第一章了</view>
+</scroll-view>

@@ -1,0 +1,66 @@
+/**index.wxss**/
+/* 顶部 */
+.header{
+  padding: 0 10rpx;
+      border-bottom: none;
+    background-color: transparent;
+    position: relative;
+    box-sizing: border-box;
+}
+.header-log{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 50rpx;
+   font-weight: 900;
+        background: linear-gradient(rgb(160,76,247), rgb(0,0,0), rgb(18,199,173));
+        -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+        -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色：*/
+}
+.header-lunbotu{
+  height:240rpx;
+background: #233;
+}
+/* 顶部end */
+.tab-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+}
+
+.tab-nav .innav {
+  flex: 6;
+  display: flex;
+  justify-content: space-around;
+}
+.nav{
+  width: 25%;
+  text-align: center;
+}
+.tab-nav view.on {
+  color: #a04cf7;
+}
+.content {
+  height: 100%;
+  padding: 0 10rpx;
+  
+}
+.tab-box {
+  /* min-height: 500rpx; */
+  /* height: calc(100vh - 400rpx); */
+  height: 100%;
+
+}
+.box{
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.list-title{
+  text-align: center;
+}
